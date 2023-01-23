@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <!-- asset transfer Form View  -->
+    <record id='asset_transfer_form_view' model='ir.ui.view'>
+        <field name="name">asset.transfer.form</field>
+        <field name="model">asset.transfer</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="transfer_from"/>
+                            <separator colspan="4"/>
+                            <field name="transfer_by" widget="radio" options="{'horizontal': true}"/>
+                        </group>
+                        <group>
+                            <field name="transfer_to"/>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- asset transfer Tree View-->
+    <record id='asset_transfer_tree_view' model='ir.ui.view'>
+        <field name="name">asset.transfer.tree</field>
+        <field name="model">asset.transfer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="transfer_from"/>
+                <field name="transfer_to"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- asset transfer Action -->
+
+    <record id='asset_transfer_action' model='ir.actions.act_window'>
+        <field name="name">Asset Transfer</field>
+        <field name="res_model">asset.transfer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

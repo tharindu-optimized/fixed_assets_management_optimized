@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- asset category form view   -->
+    <record id='asset_category_form_view' model='ir.ui.view'>
+        <field name="name">asset.category.form</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+
+                            <field name="cat_code"/>
+                            <field name="uom"/>
+                            <separator colspan="4"/>
+                            <field name="asset_account"/>
+                            <field name="deprecation_ac"/>
+
+                        </group>
+                        <group>
+                            <field name="name"/>
+                            <separator colspan="4"/>
+                            <separator colspan="4"/>
+                            <field name="sale_ac"/>
+                            <field name="deprecation_ac_disposal_ac"/>
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- asset category tree view-->
+
+    <record id='asset_category_tree_view' model='ir.ui.view'>
+        <field name="name">asset.category.tree</field>
+        <field name="model">asset.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cat_code"/>
+                <field name="name"/>
+                <field name="uom"/>
+                <field name="sale_ac"/>
+                <field name="asset_account"/>
+                <field name="deprecation_ac"/>
+                <field name="deprecation_ac_disposal_ac"/>
+
+
+            </tree>
+        </field>
+    </record>
+
+    <!-- asset category action -->
+
+    <record id='asset_category_action' model='ir.actions.act_window'>
+        <field name="name">Asset Category</field>
+        <field name="res_model">asset.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

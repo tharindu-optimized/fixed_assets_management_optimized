@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--asset master form view   -->
+    <record id='asset_master_form_view' model='ir.ui.view'>
+        <field name="name">asset.master.form</field>
+        <field name="model">asset.master</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+
+                            <field name="asset_class"/>
+                            <field name="short_name"/>
+                            <field name="acquition_date"/>
+                            <field name="acquition_cost"/>
+                            <field name="warranty_period"/>
+
+
+                        </group>
+                        <group>
+                            <field name="asset_id"/>
+                            <field name="description"/>
+                            <field name="location"/>
+                            <field name="asset_label"/>
+                            <field name="last_maintenance"/>
+
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- asset master tree view-->
+
+    <record id='asset_master_tree_view' model='ir.ui.view'>
+        <field name="name">asset.master.tree</field>
+        <field name="model">asset.master</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="asset_id"/>
+                <field name="short_name"/>
+                <field name="description"/>
+                <field name="asset_class"/>
+
+
+            </tree>
+        </field>
+    </record>
+
+    <!-- asset master action -->
+
+    <record id='asset_master_action' model='ir.actions.act_window'>
+        <field name="name">Asset Master</field>
+        <field name="res_model">asset.master</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

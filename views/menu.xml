@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <!-- manu items-->
+    <menuitem id="fixed_assets_root_menu" name="Fixed Assets"
+              web_icon="fixed_assets_optimized\static\description\icon.png" sequence="10">
+        <menuitem id="fixed_assets_sub_menu" name="Configurations" sequence="3">
+
+
+            <!--            menu unit of measurement-->
+
+            <menuitem id="unit_of_measurement_sub_menu" name="UOM" sequence="1"
+                      action="unit_measurement_action"/>
+
+            <!--            menu asset category-->
+
+            <menuitem id="asset_category_sub_menu" name="Asset Category" sequence="3"
+                      action="asset_category_action"/>
+
+            <!--   department sub menu -->
+            <menuitem id="add_department_sub_menu" name="Department" sequence="2" action="add_department_action"/>
+
+            <!--   assets location sub menu -->
+            <menuitem id="assets_location_fist_sub_menu" name="Assets Location" sequence="4"
+                      action="assets_location_action"/>
+
+            <!--   assets_classes sub menu -->
+            <menuitem id="assets_classes_sub_menu" name="Assets Classes" sequence="5" action="assets_classes_action"/>
+
+        </menuitem>
+
+        <!--   asset master sub menu -->
+
+        <menuitem id="asset_master_sub_menu" name="Asset Master" sequence="1" action="asset_master_action"/>
+
+        <!--   asset transfer sub menu -->
+
+        <menuitem id="asset_transfer_sub_menu" name="Asset Transfer" sequence="2" action="asset_transfer_action"/>
+
+
+    </menuitem>
+
+</odoo>

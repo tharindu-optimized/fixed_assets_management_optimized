@@ -7,12 +7,21 @@
     'author': 'OPTIMIZED TECHNOLOGIES',
     'summary': 'Manage all  fixed assets of the company',
     'depends': [
-        'base', 
+        'base','account'
     ],
     'data': [
-    
+        'views/unit_of_measurement_views.xml',
+        'views/asset_category_views.xml',
+        'views/department_views.xml',
+        'views/assets_location_views.xml',
+        'views/assets_classes_views.xml',
+        'views/asset_master_views.xml',
+        'views/asset_transfer_views.xml',
+        'views/menu.xml',
+        'security/ir.model.access.csv'
+
     ],
-    
+
     'installable': True,
     'application': True,
     'license': 'LGPL-3',

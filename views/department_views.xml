@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <!-- Department Form View  -->
+    <record id='add_department_form_view' model='ir.ui.view'>
+        <field name="name">add.department.form</field>
+        <field name="model">add.department</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Department Tree View-->
+    <record id='add_department_tree_view' model='ir.ui.view'>
+        <field name="name">add.department.tree</field>
+        <field name="model">add.department</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Department Action -->
+    <record id='add_department_action' model='ir.actions.act_window'>
+        <field name="name">Department</field>
+        <field name="res_model">add.department</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
