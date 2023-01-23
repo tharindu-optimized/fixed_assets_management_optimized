@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record model="product.product" id="server_hosting">
+         <field name="name">Server Hosting</field>
+         <field name="type">service</field>
+         <field name="purchase_line_warn">no-message</field>
+         <field name="sale_line_warn">no-message</field>
+      </record>      
+   </data>
+</odoo>

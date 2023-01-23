@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Email template for case remainder -->
+        <record id="server_subscription_remainder_email" model="mail.template">
+            <field name="name">Server Subscription Reminder</field>
+            <field name="model_id" ref="server_maintenance_optimized.model_server_details"/>
+            <field name="subject">Server : {{ object.server_ip }} subscription will expire in {{ ctx.get('remaining_days') }} days</field>
+            <field name="email_from"></field>
+            <field name="email_to">{{ object.resposnsible_person_id.email }}</field>
+            <field name="email_cc"></field>
+            
+            <field name="body_html" type="html">
+                 
+                <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;"><tr><td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="590" style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;">
+                <tbody>
+                    <!-- HEADER -->
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                                <tr>
+                                    <td valign="middle">
+                                    <span style="font-size: 20px; font-weight: bold;">
+                                        It's Time To Renew Your Subscription! 
+                                    </span>
+                                  </td></tr>  
+                                <tr><td colspan="2" style="text-align:center;">
+                                  <hr width="100%" style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
+                                </td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- CONTENT -->
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                                <tr><td valign="top" style="font-size: 13px;">
+                                    <div>
+                                        Dear <t t-out="object.resposnsible_person_id.display_name"></t>,<br/><br/>
+                                        Thank you for using our Product. – we love having you as our customer.<br/><br/>
+                                        
+                                        Just friendly remainder that your server : <b><t t-out="object.server_ip"></t></b> subscription will expire in <b><t t-out="ctx.get('remaining_days')"/> days.</b>
+                                        
+                                        <br/><br/>
+                                        
+                                        <div style="border-radius: 10px; height: auto;margin-left: auto;margin-right: auto;background-color:#fd7e14;">                                            
+                                            <h3 align="center">Your subscription plan cost - <t t-out="format_amount(object.subscription_charge, object.purchase_order_ids.currency_id) or ''"></t> per 
+                                                                                        <t t-if="object.subscription_plan == 'm'">
+                                                                                            <span>Month</span>
+                                                                                        </t>
+                                                                                        <t t-if="object.subscription_plan == 'a'">
+                                                                                            <span>Year</span>
+                                                                                        </t>
+                                            </h3>           
+                                        </div>
+                                    </div>
+                                </td></tr>
+                                <tr><td style="text-align:center;">
+                                  <hr width="100%" style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
+                                </td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+                </td></tr>
+                <!-- POWERED BY -->
+                <tr><td align="center" style="min-width: 590px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
+                      <tr><td style="text-align: center; font-size: 13px;">
+                        Powered by <a target="_blank" href="https://www.optimized.lk" style="color: #875A7B;">Optimized Techonology</a>
+                      </td></tr>
+                    </table>
+                </td></tr>
+                </table>
+            </field>
+            
+            <field name="auto_delete" eval="True"/>
+        </record>
+    </data>
+</odoo>
