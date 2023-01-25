@@ -4,6 +4,7 @@ from odoo import models, fields, api
 class AssetMaster(models.Model):
     _name = "asset.master"
     _description = "asset master"
+    _rec_name = 'asset_id'
 
     asset_class = fields.Many2one("assets.classes", string="Asset Class", required=True)
     asset_id = fields.Char(string="Asset ID", required=1)

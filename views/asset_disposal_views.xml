@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--asset disposal form view   -->
+
+    <record id='asset_disposal_form_view' model='ir.ui.view'>
+        <field name="name">asset.disposal.form</field>
+        <field name="model">asset.disposal</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+
+                            <field name="date"/>
+                            <field name="disposal_reason"/>
+                            <field name="uom"/>
+                            <field name="selling_value"/>
+
+                        </group>
+                        <group>
+                            <field name="customer"/>
+                            <field name="asset_id"/>
+                            <field name="qty"/>
+                            <field name="tax"/>
+
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- asset disposal tree view-->
+
+    <record id='asset_disposal_tree_view' model='ir.ui.view'>
+        <field name="name">asset.disposal.tree</field>
+        <field name="model">asset.disposal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date"/>
+                <field name="customer"/>
+                <field name="disposal_reason"/>
+                <field name="asset_id"/>
+                <field name="uom"/>
+                <field name="qty"/>
+                <field name="selling_value"/>
+                <field name="tax"/>
+
+
+            </tree>
+        </field>
+    </record>
+
+    <!--asset disposal  action -->
+
+    <record id='asset_disposal_action' model='ir.actions.act_window'>
+        <field name="name">Asset Disposal</field>
+        <field name="res_model">asset.disposal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

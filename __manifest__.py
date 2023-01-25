@@ -17,8 +17,13 @@
         'views/assets_classes_views.xml',
         'views/asset_master_views.xml',
         'views/asset_transfer_views.xml',
+        'views/asset_disposal_views.xml',
+        'views/disposal_reason_views.xml',
+        'views/asset_disposal_confirmation_views.xml',
         'views/menu.xml',
+        'security/security.xml',
         'security/ir.model.access.csv'
+
 
     ],
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--disposal reason form view   -->
+    <record id='disposal_reason_form_view' model='ir.ui.view'>
+        <field name="name">disposal.reason.form</field>
+        <field name="model">disposal.reason</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+
+                            <field name="disposal_reason"/>
+
+
+                        </group>
+                        <group>
+
+
+
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- disposal reason tree view-->
+
+    <record id='disposal_reason_tree_view' model='ir.ui.view'>
+        <field name="name">disposal.reason.tree</field>
+        <field name="model">disposal.reason</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="disposal_reason"/>
+
+
+            </tree>
+        </field>
+    </record>
+
+    <!-- disposal reason  action -->
+
+    <record id='disposal_reason_action' model='ir.actions.act_window'>
+        <field name="name">Disposal Reason</field>
+        <field name="res_model">disposal.reason</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

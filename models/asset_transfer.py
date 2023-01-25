@@ -10,3 +10,11 @@ class AssetTransfer(models.Model):
     transfer_by = fields.Selection([
         ('asset', 'Asset'),
         ('asset group', 'Asset Group')], string="Transfer By")
+    transfer_date = fields.Date(string="Transfer Date", required=1)
+    transfer_type = fields.Selection([
+        ('individual asset transfer', 'Individual Asset Transfer'),
+        ('mass asset transfer', 'Mass Asset Transfer')], string="Transfer Type")
+    description = fields.Char(string="Description", required=0)
+    asset_id = fields.Many2one("asset.master", string="Asset Id")
+    uom = fields.Char(string="UOM", required=0)
+    qty = fields.Char(string="Quantity", required=0)

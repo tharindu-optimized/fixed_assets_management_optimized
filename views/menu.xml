@@ -4,7 +4,7 @@
     <!-- manu items-->
     <menuitem id="fixed_assets_root_menu" name="Fixed Assets"
               web_icon="fixed_assets_optimized\static\description\icon.png" sequence="10">
-        <menuitem id="fixed_assets_sub_menu" name="Configurations" sequence="3">
+        <menuitem id="fixed_assets_sub_menu" name="Configurations" sequence="4">
 
 
             <!--            menu unit of measurement-->
@@ -14,7 +14,7 @@
 
             <!--            menu asset category-->
 
-            <menuitem id="asset_category_sub_menu" name="Asset Category" sequence="3"
+            <menuitem id="asset_category_sub_menu" name="Asset Category" sequence="5"
                       action="asset_category_action"/>
 
             <!--   department sub menu -->
@@ -26,6 +26,26 @@
 
             <!--   assets_classes sub menu -->
             <menuitem id="assets_classes_sub_menu" name="Assets Classes" sequence="5" action="assets_classes_action"/>
+
+            <!--    sub menu -->
+            <menuitem id="disposal_reason_sub_menu" name="Disposal Reason" sequence="3"
+                      action="disposal_reason_action"/>
+
+            <!--  asset disposal menus-->
+        </menuitem>
+
+        <menuitem id="asset_disposal_sub_menu" name="Asset Disposal" sequence="3">
+
+            <!--  Asset Disposal menu-->
+
+            <menuitem id="asset_disposal_click_sub_menu" name="Asset Disposal" sequence="1"
+                      action="asset_disposal_action"/>
+
+            <!-- Asset Disposal Confirmation menu-->
+
+            <menuitem id="disposal_confirmation_sub_menu" name=" Asset Disposal Confirmation" sequence="2"
+                      action="disposal_confirmation_action"/>
+
 
         </menuitem>
 

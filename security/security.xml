@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--module category for fixed_assets_management-->
+
+    <record model="ir.module.category" id="module_category_fixed_assets_management">
+        <field name="name">Fixed Assets Management</field>
+        <field name="description">category fixed assets management</field>
+    </record>
+
+    <!--Asset Disposal Confirmation User group-->
+
+    <record id="asset_disposal_confirmation_user" model="res.groups">
+        <field name="name">Asset Disposal Confirmation User</field>
+        <field name="category_id" ref="module_category_fixed_assets_management"/>
+
+    </record>
+
+</odoo>

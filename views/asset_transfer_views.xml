@@ -13,11 +13,28 @@
                     <group>
                         <group>
                             <field name="transfer_from"/>
+                            <!--  blank space-->
                             <separator colspan="4"/>
                             <field name="transfer_by" widget="radio" options="{'horizontal': true}"/>
+                            <separator colspan="4"/>
+                            <field name="transfer_date"/>
+                            <field name="description"/>
+                            <separator colspan="4"/>
+                            <field name="asset_id"/>
+                            <field name="qty"/>
+
                         </group>
                         <group>
                             <field name="transfer_to"/>
+                            <!-- blank space-->
+                            <separator colspan="4"/>
+                            <separator colspan="4"/>
+                            <separator colspan="4"/>
+                            <field name="transfer_type"/>
+                            <!-- blank space-->
+                            <separator colspan="4"/>
+                            <separator colspan="4"/>
+                            <field name="uom"/>
 
                         </group>
                     </group>
