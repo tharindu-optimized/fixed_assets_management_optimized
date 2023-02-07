@@ -16,5 +16,5 @@ class AssetTransfer(models.Model):
         ('mass asset transfer', 'Mass Asset Transfer')], string="Transfer Type")
     description = fields.Char(string="Description", required=0)
     asset_id = fields.Many2one("asset.master", string="Asset Id")
-    uom = fields.Char(string="UOM", required=0)
+    uom = fields.Many2one("uom.uom", string="UOM", required=True)
     qty = fields.Char(string="Quantity", required=0)

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Asset Inquiry Tree View-->
+
+    <record id='asset_inquiry_tree_view' model='ir.ui.view'>
+        <field name="name">asset.master.tree</field>
+        <field name="model">asset.master</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="asset_id"/>
+                <field name="short_name"/>
+                <field name="acquition_cost"/>
+                <field name="description"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <!--    filter and groups-->
+
+    <record id="asset_class_view" model="ir.ui.view">
+        <field name="name">asset.master.view</field>
+        <field name="model">asset.master</field>
+        <field name="arch" type="xml">
+            <search string="Asset Classes">
+                <filter name="group_asset_classes" string="Asset Classes" context="{'group_by':'asset_class'}"/>
+                <filter name="group_asset_category" string="Asset Category" context="{'group_by':'asset_category'}"/>
+            </search>
+        </field>
+    </record>
+
+<!--     asset inquiry action-->
+
+    <record id='asset_inquiry_action' model='ir.actions.act_window'>
+        <field name="name">Asset Inquiry</field>
+        <field name="res_model">asset.master</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="asset_inquiry_tree_view"/>
+<!--        <field name="context">{'search_default_group_asset_classes':1,'search_default_group_asset_category':1}</field>-->
+    </record>
+
+</odoo>

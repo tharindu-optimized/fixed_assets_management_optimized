@@ -13,11 +13,11 @@
                     <group>
                         <group>
                             <field name="class_code"/>
-                            <field name="name"/>
                             <field name="description"/>
-                            <field name="basic_depr_rate"/>
                         </group>
                         <group>
+                            <field name="name"/>
+                            <field name="basic_depr_rate"/>
                         </group>
                     </group>
                 </sheet>

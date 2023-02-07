@@ -15,15 +15,16 @@
                             <field name="acquition_date"/>
                             <field name="acquition_cost"/>
                             <field name="warranty_period"/>
-
+                            <field name="last_maintenance"/>
 
                         </group>
                         <group>
+                            <field name="asset_category"/>
                             <field name="asset_id"/>
                             <field name="description"/>
                             <field name="location"/>
                             <field name="asset_label"/>
-                            <field name="last_maintenance"/>
+
 
                         </group>
                         <group>
@@ -55,9 +56,10 @@
     <!-- asset master action -->
 
     <record id='asset_master_action' model='ir.actions.act_window'>
-        <field name="name">Asset Master</field>
+        <field name="name">Asset Registration</field>
         <field name="res_model">asset.master</field>
         <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="asset_master_tree_view"/>
     </record>
 
 

@@ -8,7 +8,7 @@ class AssetCategory(models.Model):
 
     cat_code = fields.Char(string="Category Code", required=True)
     name = fields.Char(string="Name", required=True)
-    uom = fields.Many2one("unit.measurement", string="UOM", required=True)
+    uom = fields.Many2one("uom.uom", string="UOM", required=True)
     sale_ac = fields.Many2one("account.journal", string="Sales Account", required=True,
                               domain=[('type', 'in', ('bank', 'cash'))])
     asset_account = fields.Many2one("account.journal", string="Asset Account", required=True,

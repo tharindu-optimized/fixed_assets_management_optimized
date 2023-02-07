@@ -4,13 +4,16 @@
     <!-- manu items-->
     <menuitem id="fixed_assets_root_menu" name="Fixed Assets"
               web_icon="fixed_assets_optimized\static\description\icon.png" sequence="10">
-        <menuitem id="fixed_assets_sub_menu" name="Configurations" sequence="4">
+        <menuitem id="fixed_assets_sub_menu" name="Configurations" sequence="6">
 
 
             <!--            menu unit of measurement-->
 
-            <menuitem id="unit_of_measurement_sub_menu" name="UOM" sequence="1"
-                      action="unit_measurement_action"/>
+            <menuitem id="unit_of_measurement_sub_menu_main" name="Unit Of Measurement" sequence="1">
+
+                <menuitem id="unit_of_measurement_sub_menu" name="Unit Of Measurement Categories" sequence="1" action="uom.product_uom_categ_form_action"/>
+
+            </menuitem>
 
             <!--            menu asset category-->
 
@@ -51,11 +54,19 @@
 
         <!--   asset master sub menu -->
 
-        <menuitem id="asset_master_sub_menu" name="Asset Master" sequence="1" action="asset_master_action"/>
+        <menuitem id="asset_master_sub_menu" name="Asset Registration" sequence="1" action="asset_master_action"/>
 
         <!--   asset transfer sub menu -->
 
         <menuitem id="asset_transfer_sub_menu" name="Asset Transfer" sequence="2" action="asset_transfer_action"/>
+
+        <!--    Asset purchase sub menu -->
+
+        <menuitem id="asset_purchase_sub_menu" name="Asset Purchase" sequence="4" action="purchase.purchase_rfq"/>
+
+        <!--    Asset Inquiry sub menu -->
+
+        <menuitem id="asset_inquiry_sub_menu" name="Asset Inquiry" sequence="5" action="asset_inquiry_action"/>
 
 
     </menuitem>

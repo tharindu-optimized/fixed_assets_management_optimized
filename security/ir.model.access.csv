@@ -1,5 +1,4 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-unit_measurement_base_user_access,unit_measurement_base_user_access,model_unit_measurement,base.group_user,1,1,1,1
 asset_category_base_user_access,asset_category_base_user_access,model_asset_category,base.group_user,1,1,1,1
 add_department_base_user_access,add_department_base_user_access,model_add_department,base.group_user,1,1,1,1
 assets_location_base_user_access,assets_location_base_user_access,model_assets_location,base.group_user,1,1,1,1

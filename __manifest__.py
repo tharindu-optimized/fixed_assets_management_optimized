@@ -10,7 +10,6 @@
         'base','account'
     ],
     'data': [
-        'views/unit_of_measurement_views.xml',
         'views/asset_category_views.xml',
         'views/department_views.xml',
         'views/assets_location_views.xml',
@@ -20,6 +19,7 @@
         'views/asset_disposal_views.xml',
         'views/disposal_reason_views.xml',
         'views/asset_disposal_confirmation_views.xml',
+        'views/asset_inquiry_views.xml',
         'views/menu.xml',
         'security/security.xml',
         'security/ir.model.access.csv'
